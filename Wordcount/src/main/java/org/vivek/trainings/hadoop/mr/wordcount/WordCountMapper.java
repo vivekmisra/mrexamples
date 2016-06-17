@@ -1,4 +1,4 @@
-package org.vivek.trainings.e63;
+package org.vivek.trainings.hadoop.mr.wordcount;
 
 import java.io.IOException;
 import java.util.StringTokenizer;

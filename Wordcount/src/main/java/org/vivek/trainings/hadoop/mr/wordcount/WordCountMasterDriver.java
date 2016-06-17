@@ -1,4 +1,4 @@
-package org.vivek.trainings.e63;
+package org.vivek.trainings.hadoop.mr.wordcount;
 
 
 import org.apache.hadoop.conf.Configured;
