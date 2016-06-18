@@ -9,7 +9,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Mapper.Context;
 
-public class CitationCountMapper  extends Mapper<LongWritable, Text, Text, Text> {
+public class CitedMapper  extends Mapper<LongWritable, Text, Text, Text> {
     
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
                     
