@@ -13,7 +13,8 @@ public class CitationCountMapper  extends Mapper<LongWritable, Text, Text, Text>
     
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
                     
-        String[] citation = value.toString().split(",");//split V1 by "," and get first cited [1] as K2 
+        String[] citation = value.toString().split(",");//split V1 by "," 
+        //Now get  [1] "Cited" as K2 and [0] "Citing" as V2 ,reverse index
         context.write(new Text(citation[1]), new Text(citation[0]));// list(K2,V2)
     }
 	      
