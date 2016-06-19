@@ -83,8 +83,9 @@ public class CitedMasterCountDriver extends Configured implements Tool{
         
         job.setMapperClass(CitedMapperCount.class);
         job.setReducerClass(CitedReducerCount.class);
-        
+        //The map output value V2 is Text type
         job.setMapOutputValueClass(Text.class);
+        //The reduce output key K3 is Text and V3 is IntWritable
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         
