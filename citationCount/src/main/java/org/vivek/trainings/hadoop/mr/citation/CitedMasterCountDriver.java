@@ -22,7 +22,7 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /*This MASTER class is responsible for running map reduce job*/
-public class CitationMasterCountDriver extends Configured implements Tool{
+public class CitedMasterCountDriver extends Configured implements Tool{
 	
 	
 	public static class CitedMapperCount  extends Mapper<LongWritable, Text, Text, Text> {
@@ -74,7 +74,7 @@ public class CitationMasterCountDriver extends Configured implements Tool{
 		Configuration conf = getConf();
         
         Job job = new Job(conf, "MyJob");
-        job.setJarByClass(CitationMasterCountDriver.class);
+        job.setJarByClass(CitedMasterCountDriver.class);
         
         Path in = new Path(args[0]);
         Path out = new Path(args[1]);
@@ -94,7 +94,7 @@ public class CitationMasterCountDriver extends Configured implements Tool{
 	}
 
 	public static void main(String[] args) throws Exception {
-		CitationMasterCountDriver driver = new CitationMasterCountDriver();
+		CitedMasterCountDriver driver = new CitedMasterCountDriver();
 		int exitCode = ToolRunner.run(driver, args);
 		System.exit(exitCode);
 	}
